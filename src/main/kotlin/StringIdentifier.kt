@@ -9,6 +9,6 @@ class StringIdentifier {
     }
 
     fun isTurbulent (word: String): Boolean {
-        return !isFlowing(word) || !isReceding(word)
+        return !isFlowing(word) && !isReceding(word)
     }
 }

@@ -14,16 +14,20 @@ class StringIdentifierTest {
     fun `two same letters strings are both flowing and receding`() {
         assertThat(categoriser.isFlowing("aa")).isTrue()
         assertThat(categoriser.isReceding("aa")).isTrue()
+        assertThat(categoriser.isTurbulent("aa")).isFalse()
+
     }
 
     @Test
     fun `two letters string dn is flowing`() {
         assertThat(categoriser.isFlowing("dn")).isTrue()
+        assertThat(categoriser.isTurbulent("dn")).isFalse()
     }
 
     @Test
     fun `two letters string zj is receding`() {
         assertThat(categoriser.isReceding("zj")).isTrue()
+        assertThat(categoriser.isTurbulent("zj")).isFalse()
     }
 
     @Test
